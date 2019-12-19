@@ -7,6 +7,7 @@ class CreateEmployees < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :office
       t.string :img_url
+      t.string :dog
 
       t.timestamps
     end

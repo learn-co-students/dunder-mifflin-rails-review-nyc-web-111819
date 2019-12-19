@@ -1,0 +1,5 @@
+<%@dogs.each do |dog|%>
+    <%=link_to dog.name, dog_path(dog)%>
+    <p><%=dog.breed%></p>
+    <p><%=dog.age%></p>
+<%end%>

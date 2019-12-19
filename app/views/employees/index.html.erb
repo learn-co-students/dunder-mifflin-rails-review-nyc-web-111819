@@ -1,0 +1,8 @@
+<%@employees.each do |employee|%>
+    <img src="<%=employee.img_url%>">
+    <%=link_to(employee.first_name+" "+employee.last_name, employee_path(employee))%>
+    <p><%=employee.alias%></p>
+    <p><%=employee.title%></p>
+    <p><%=employee.office%></p>
+    <p><%=employee.dog%></p>
+<%end%>
