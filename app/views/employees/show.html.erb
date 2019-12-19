@@ -1,0 +1,11 @@
+<h1>Employee Show Page </h1>
+<%= button_to "Index", employees_path, method: :get %>
+<%= button_to "Edit", edit_employee_path(@employee), method: :get %>
+
+<p>Name: <%= @employee.to_s %> </p>
+<p>Alias: <%= @employee.alias %> </p>
+<p>Title: <%= @employee.title %> </p>
+<p>Office: <%= @employee.office %> </p>
+<p>Dog Name: <%= link_to @employee.dog.name, dog_path(@employee.dog) %> </p>
+<img src=<%=@employee.img_url%> alt=<%=@employee.to_s%> width="500" height="500">
+

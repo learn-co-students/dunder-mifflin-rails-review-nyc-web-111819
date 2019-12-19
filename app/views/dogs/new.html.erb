@@ -1,0 +1,26 @@
+<h1>Dog New Page</h1>
+
+<ul>
+    <% if flash[:messages] %>
+        <% flash[:messages].each do |error| %>
+            <li><%= error %></li>
+        <%end %>
+    <%end %>
+</ul>
+
+<%= form_for @dog do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+    <br>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <br>
+    <%= f.submit "Add New Dog" %>
+
+<% end  %>
+
+<%= button_to "Cancel New Dog", dogs_path, method: :get %>
