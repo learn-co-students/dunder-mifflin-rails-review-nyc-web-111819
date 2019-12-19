@@ -1,0 +1,13 @@
+<h1>Employee</h1>
+<br>
+<%= button_to "All Employees", employees_path, method: :get %>
+<br>
+<h3>Office: <%= @employee.office %></h3>
+<%# image_tag(@employee.img_url, :size => "260x180", :crop => :fill) %>
+<img src=<%= @employee.img_url %>, width="40%" height="40%">
+<h3>Name: <%= @employee.to_s %></h3>
+<h4>Alias: <%= @employee.alias %></h4>
+<h3>Title: <%= @employee.title %></h3>
+<h3>My Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h3>
+<br>
+<%= button_to "Edit", edit_employee_path(@employee), method: :get %>
