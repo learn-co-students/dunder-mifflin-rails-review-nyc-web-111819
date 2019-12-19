@@ -1,0 +1,19 @@
+<% if flash[:messages] %>
+<h2> Errors </h2>
+	<ul>
+	<% flash[:messages].each do |error| %>
+		<li> <%= error %> </li>
+	<% end %>
+	</ul>
+<% end %>
+
+<%=form_for @dog do |f|%>
+    <p><%= f.label :name %></p>
+    <p><%= f.text_field :name %></p>
+    <p><%= f.label :breed %></p>
+    <p><%= f.text_field :breed %></p>
+    <p><%= f.label :age %></p>
+    <p><%= f.number_field :age %></p>
+    <p><%= f.submit %></p>
+<% end %>
+

@@ -1,0 +1,26 @@
+<% if flash[:messages] %>
+<h2> Errors </h2>
+	<ul>
+	<% flash[:messages].each do |error| %>
+		<li> <%= error %> </li>
+	<% end %>
+	</ul>
+<% end %>
+
+<%=form_for @employee do |f|%>
+    <h4><%= f.label :first_name %></h4>
+    <h4><%= f.text_field :first_name %></h4>
+    <h4><%= f.label :last_name %></h4>
+    <h4><%= f.text_field :last_name %></h4>
+    <h4><%= f.label :alias %></h4>
+    <h4><%= f.text_field :alias %></h4>
+    <h4><%= f.label :title %></h4>
+    <h4><%= f.text_field :title %></h4>
+    <h4><%= f.label :office %></h4>
+    <h4><%= f.text_field :office %></h4>
+    <h4><%= f.label :dog %></h4>
+    <h4><%= f.collection_select(:dog_id, Dog.all, :id, :name) %></h4>
+    <h4><%= f.label :img_url %></h4>
+    <h4><%= f.text_field :img_url %></h4>
+    <h4><%= f.submit %></h4>
+<% end %>
