@@ -1,0 +1,9 @@
+<h1>All the Dogs!</h1>
+
+<ul>
+<% @dogs.each do |d| %>
+  <li><%= link_to(d.name, dog_path(d)) %></li>
+<% end%>
+</ul>
+<hr>
+<%= link_to("View list of employees", employees_path) %>
