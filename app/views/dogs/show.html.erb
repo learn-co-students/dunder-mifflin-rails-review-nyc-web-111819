@@ -1,0 +1,15 @@
+<h1> Dog Info </h1>
+
+<p> Name: <%= @dog.name %></p>
+<p> Breed: <%= @dog.breed %></p>
+<p> Age: <%= @dog.age %></p>
+
+<ul>
+<% @dog.employees.each do |e| %>
+  <li><%= e.first_name %></li>
+<% end %>
+</ul>
+
+<p><%= button_to "Edit Dog Info", edit_dog_path, method: :get %></p>
+<p><%= button_to "Create New Dog", new_dog_path, method: :get %></p>
+

@@ -1,0 +1,15 @@
+<h1>All Dogs </h1>
+
+<ul>
+<% @dogs.each do |d| %>
+  <li><%= link_to d.name, dog_path(d) %></li>
+<% end %>
+</ul>
+
+<ul>
+  <% sorted = @dogs.sort_by do |d| d.employees.count %>
+  <% end.reverse %>
+  <% sorted.each do |dog| %>
+  <li><%= link_to dog.name, dog_path(dog) %></li>
+  <% end %>
+  </ul>
