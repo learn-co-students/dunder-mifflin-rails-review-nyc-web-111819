@@ -1,0 +1,16 @@
+<h1>Doggo Page</h1>
+<br>
+<%= button_to "Fellow Doggos", dogs_path, method: :get %>
+<br>
+<h3>Name: <%= @dog.name %></h3>
+<h3>Age: <%= @dog.age %></h3>
+<h3>Breed: <%= @dog.breed %></h3>
+<br>
+<% if @dog.employees.any? %>
+  <h2>My Humans</h2>
+  <ul>
+  <% @dog.employees.each do |e|%>
+    <p><li><%= link_to e.to_s, employee_path(e) %></li></p>
+  <% end%>
+  </ul>
+<% end %>

@@ -1,0 +1,21 @@
+<% if flash[:messages]%>
+  <h2><%= flash[:messages].join(", ") + "." %></h2>
+<% end%>
+
+<%= form_for(@employee) do |f| %>
+  <%= f.label :office %>
+  <%= f.text_field :office %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :alias %>
+  <%= f.text_field :alias %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url%>
+  <%= f.label :dog_id %>
+  <%= f.collection_select :dog_id, Dog.all, :id, :name%>
+  <%= f.submit %>
+<% end %>
