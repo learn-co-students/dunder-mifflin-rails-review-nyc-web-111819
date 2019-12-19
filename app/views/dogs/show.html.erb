@@ -1,0 +1,6 @@
+<p><%=@dog.name%></p>
+<p><%=@dog.breed%></p>
+<p><%=@dog.age%></p>
+<%@owners.each do |owner|%>
+    <%= link_to owner.first_name+" "+owner.last_name, employee_path(owner)%>
+<%end%>
