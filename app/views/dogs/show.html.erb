@@ -1,0 +1,9 @@
+<h1>Dog Show Page</h1>
+
+<%= button_to "Dog Index", dogs_path, method: :get %>
+<%= button_to "Edit Dog", edit_dog_path(@dog), method: :get %>
+<%= button_to "Delete Dog", dog_path(@dog), method: :delete, confirm: "Are you sure?" %>
+
+<p>Dog Name: <%= @dog.name %></p>
+<p>Dog Breed: <%= @dog.breed %></p>
+<p>Dog Age: <%= @dog.age %></p>
